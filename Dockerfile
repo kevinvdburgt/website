@@ -1,7 +1,7 @@
 # Generate the static files using Node 11
 FROM node:11-alpine AS build
 WORKDIR /app
-COPY package*.json /app/
+COPY package*.json .npmrc /app/
 RUN npm install
 COPY . /app/
 RUN npm run export
